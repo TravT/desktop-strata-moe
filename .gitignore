@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Strata Data & Weights
+Strata-data/
+models/
+packs/
+mtp/
+*.gguf
+*.bin
+trace.bin
+
+# OS & Environment
+.env
+.DS_Store
+Thumbs.db
+*.log
+bench/results/local_*.json

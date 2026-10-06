@@ -1,0 +1,13 @@
+{
+  "model_family": "coder",
+  "model_size": "IQ1_M",
+  "context_length": 65536,
+  "kv_cache_mode": "8-bit",
+  "kv_resident_tokens": 32768,
+  "draft_vocab": "en",
+  "low_ram_mode": "resident",
+  "port": 8080,
+  "host": "0.0.0.0",
+  "idle_unload_s": 600,
+  "resident_headroom_gib": 4
+}

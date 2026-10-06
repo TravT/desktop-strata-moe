@@ -1,0 +1,18 @@
+[Unit]
+Description=Strata Desktop Tiered MoE Inference Engine (PRJ-17)
+After=network.target sound.target
+
+[Service]
+Type=simple
+User=tlima
+WorkingDirectory=/opt/strata
+ExecStart=/opt/strata/engine/run-coder.sh --port 8080 --context 65536 --draft-vocab en --low-ram resident
+Restart=on-failure
+RestartSec=5s
+LimitMEMLOCK=infinity
+LimitNOFILE=65535
+Environment="STRATA_RESIDENT_HEADROOM_GIB=4"
+Environment="CUDA_VISIBLE_DEVICES=0"
+
+[Install]
+WantedBy=multi-user.target
